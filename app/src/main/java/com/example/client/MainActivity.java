@@ -38,12 +38,11 @@ public class MainActivity extends Activity {
 	Socket socket = null;
 	String buffer = "";
 	TextView txt1;
-	TextView txt2;
 	Button send;
 	EditText ed1;
+	EditText ed2;
 	String geted1;
-	String ip;
-	MyThread myThread;
+	String geted2;
 
 	public Handler myHandler = new Handler() {
 		@Override
@@ -61,22 +60,24 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		txt1 = (TextView) findViewById(R.id.txt1);
-		txt2 = (TextView) findViewById(R.id.ip);
 		send = (Button) findViewById(R.id.send);
 		ed1 = (EditText) findViewById(R.id.ed1);
-
+		ed2 = (EditText) findViewById(R.id.ed2);
 
 		send.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				geted1 = ed1.getText().toString();
-				txt1.append("发送信息:"+geted1+"\n");
-				//启动线程 向服务器发送和接收信息
-				new MyThread(geted1).start();
+				geted2 = ed2.getText().toString();
+				if(geted2.equals("")){
+					txt1.append("请输入ip"+"\n");
+				}else {
+					geted1 = ed1.getText().toString();
+					txt1.append("发送信息:"+geted1+"\n");
+					//启动线程 向服务器发送和接收信息
+					new MyThread(geted1,geted2).start();
+				}
 			}
 		});
-		ip = getIpAddressString();
-		txt2.setText("IP addresss:"+ip);
 	}
 
 	class MyThread extends Thread {
@@ -84,26 +85,27 @@ public class MainActivity extends Activity {
 		public ServerSocket serverSocket = null;
 
 		public String string;
+		public String IP;
 
-		public MyThread(String s) {
+		public MyThread(String s,String ip) {
 			string = s;
+			IP = ip;
 		}
-
 		//写入信息并获取反馈信息
 		@Override
 		public void run() {
+
+			//定义消息
+			Message msg = new Message();
+			msg.what = 0x11;
+			Bundle bundle = new Bundle();
+			bundle.clear();
 
 			try {
 				Log.e("try","try");
 				//连接服务器 并设置连接超时为5秒
 				socket = new Socket();
-				socket.connect(new InetSocketAddress("192.168.43.15", 30000), 1000);
-
-				//定义消息
-				Message msg = new Message();
-				msg.what = 0x11;
-				Bundle bundle = new Bundle();
-				bundle.clear();
+				socket.connect(new InetSocketAddress(IP, 30000), 1000);
 
 				BufferedReader bff = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 				//读取发来服务器信息
@@ -124,10 +126,9 @@ public class MainActivity extends Activity {
 					//关闭各种输入输出流
 				   bff.close();
 					outputStream.close();
-					Log.e("try1","try1");
 				}catch (IOException e) {
 					//连接超时 在UI界面显示消息
-					bundle.putString("msg", "服务器连接失败！请检查网络是否打开");
+					bundle.putString("msg", "连接失败!");
 					msg.setData(bundle);
 					//发送消息 修改UI线程中的组件
 					myHandler.sendMessage(msg);
@@ -136,40 +137,24 @@ public class MainActivity extends Activity {
 
 			} catch (SocketTimeoutException aa) {
 				aa.printStackTrace();
+				bundle.putString("msg", "连接失败！");
+				msg.setData(bundle);
+				//发送消息 修改UI线程中的组件
+				myHandler.sendMessage(msg);
 			} catch (IOException e) {
 				e.printStackTrace();
+				bundle.putString("msg", "连接失败！");
+				msg.setData(bundle);
+				//发送消息 修改UI线程中的组件
+				myHandler.sendMessage(msg);
 			}
 		}
 	}
-
-
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-
-	public static String getIpAddressString() {
-		try {
-			for (Enumeration<NetworkInterface> enNetI = NetworkInterface
-					.getNetworkInterfaces(); enNetI.hasMoreElements(); ) {
-				NetworkInterface netI = enNetI.nextElement();
-				for (Enumeration<InetAddress> enumIpAddr = netI
-						.getInetAddresses();enumIpAddr.hasMoreElements(); ) {
-					InetAddress inetAddress = enumIpAddr.nextElement();
-					Log.e("ip",inetAddress.toString());
-					if (!inetAddress.isLoopbackAddress() && inetAddress instanceof Inet4Address
-							&& !inetAddress.isLoopbackAddress() && inetAddress.toString().substring(0,3).equals("/19")) {
-						return inetAddress.getHostAddress();
-					}
-				}
-			}
-		} catch (SocketException e) {
-			e.printStackTrace();
-		}
-		return "";
-	}
 }
-;
