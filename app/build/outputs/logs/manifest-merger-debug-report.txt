@@ -65,25 +65,25 @@ INJECTED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManif
 		INJECTED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:10:2-63
+ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:10:5-66
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:10:19-61
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:10:22-64
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:11:2-69
+ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:11:5-72
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:11:19-66
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:11:22-69
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:12:1-69
+ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:12:5-73
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:12:18-66
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:12:22-70
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:13:1-70
+ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:13:5-74
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:13:18-68
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:13:22-72
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:15:1-71
+ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:15:5-75
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:15:18-69
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:15:22-73
 application
 ADDED from C:\Users\quxia\Desktop\bbt\socket\Client\app\src\main\AndroidManifest.xml:16:5-30:19
 MERGED from [com.android.support:appcompat-v7:26.0.0-alpha1] C:\Users\quxia\.gradle\caches\transforms-1\files-1.1\appcompat-v7-26.0.0-alpha1.aar\601de2e1100150d185832d797182cce6\AndroidManifest.xml:29:5-20
