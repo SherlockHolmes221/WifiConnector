@@ -1,4 +1,4 @@
-#Tue Apr 24 16:46:45 CST 2018
-base.0=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\3
+#Wed Apr 25 01:22:41 CST 2018
+base.0=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

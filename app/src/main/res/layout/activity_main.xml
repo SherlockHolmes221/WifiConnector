@@ -5,21 +5,12 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/textsss"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="112dp"
-        android:text="HelloWorld" />
-
-    <TextView
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/textsss"
-        android:layout_marginBottom="95dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
         android:text="TextView" />
 
 </RelativeLayout>

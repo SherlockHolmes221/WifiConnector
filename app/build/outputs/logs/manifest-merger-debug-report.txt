@@ -26,33 +26,33 @@ ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\Andr
 	android:name
 		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:6:22-63
 uses-permission#android.permission.BLUETOOTH
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:7:2-64
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:7:19-62
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:7:22-65
 uses-permission#android.permission.INTERNET
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:8:3-64
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:8:5-66
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:8:20-62
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:8:22-64
 uses-permission#android.permission.BLUETOOTH_ADMIN
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:9:2-70
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:9:5-73
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:9:19-68
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:9:22-71
 uses-permission#android.permission.READ_CONTACTS
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:10:2-69
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:10:5-72
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:10:19-66
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:10:22-69
 uses-permission#android.permission.WRITE_CONTACTS
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:11:1-69
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:11:5-73
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:11:18-66
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:11:22-70
 uses-permission#android.permission.READ_PHONE_STATE
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:12:1-70
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:12:5-74
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:12:18-68
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:12:22-72
 uses-permission#android.permission.ACCESS_WIFI_STATE
-ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:14:1-71
+ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:14:5-75
 	android:name
-		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:14:18-69
+		ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:14:22-73
 uses-sdk
 ADDED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:15:5-17:41
 INJECTED from C:\Users\quxia\Desktop\bbt\socket\androidSocketTest\app\src\main\AndroidManifest.xml:15:5-17:41

@@ -15,37 +15,29 @@ import android.os.Handler;
 import android.os.Message;
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.Menu;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
 	public static ServerSocket serverSocket = null;
-	public static TextView mTextView, textView1;
-    private String IP = "";
-    String buffer = "";
-	public static Handler mHandler = new Handler() {
-		@Override
-		public void handleMessage(android.os.Message msg) {
-			if (msg.what==0x11) {
-				Bundle bundle = msg.getData();
-				mTextView.append("client"+bundle.getString("msg")+"\n");
-			}
-		};
-	};
-
+	public  TextView textView1;
+	private String IP = "";
+	String buffer = "";
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		mTextView = (TextView) findViewById(R.id.textsss);
 		textView1 = (TextView) findViewById(R.id.textView1);
 		IP = getlocalip();
 		textView1.setText("IP addresss:"+IP);
+
 		new Thread() {
 			public void run() {
-				Bundle bundle = new Bundle();
-				bundle.clear();
+				
 				OutputStream output;
 				String str = "hello hehe";
 				try {
@@ -59,16 +51,22 @@ public class MainActivity extends Activity {
 							output.write(str.getBytes("gbk"));
 							output.flush();
 							socket.shutdownOutput();
-							//mHandler.sendEmptyMessage(0);
+						
 							BufferedReader bff = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 							String line = null;
 							buffer = "";
 							while ((line = bff.readLine())!=null) {
 								buffer = line + buffer;
 							}
-							bundle.putString("msg", buffer.toString());
-							msg.setData(bundle);
-							mHandler.sendMessage(msg);
+							
+							runOnUiThread(new Runnable() {
+								@Override
+								public void run() {
+									showToast(buffer);
+									react(buffer);
+								}
+							});
+							
 							bff.close();
 							output.close();
 							socket.close();
@@ -83,14 +81,31 @@ public class MainActivity extends Activity {
 			};
 		}.start();
 	}
-	private String getlocalip(){  
-	       WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);    
-	        WifiInfo wifiInfo = wifiManager.getConnectionInfo();    
-	        int ipAddress = wifiInfo.getIpAddress();   
-	      //  Log.d(Tag, "int ip "+ipAddress);  
-	        if(ipAddress==0)return null;  
-	        return ((ipAddress & 0xff)+"."+(ipAddress>>8 & 0xff)+"."  
-	               +(ipAddress>>16 & 0xff)+"."+(ipAddress>>24 & 0xff));  
-	    } 
+
+	private void react(String buffer) {
+		if(buffer.equals("0")){
+			Log.e("react","wake");
+
+		}else if(buffer.equals("1")){
+			Log.e("react","show");
+
+		}else if(buffer.equals("2")){
+			Log.e("react","ring");
+
+		}
+}
+
+	private void showToast(String s) {
+		Toast.makeText(this,s,Toast.LENGTH_SHORT).show();
+	}
 	
+	private String getlocalip(){
+		WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+		WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+		int ipAddress = wifiInfo.getIpAddress();
+		//  Log.d(Tag, "int ip "+ipAddress);
+		if(ipAddress==0)return null;
+		return ((ipAddress & 0xff)+"."+(ipAddress>>8 & 0xff)+"."
+				+(ipAddress>>16 & 0xff)+"."+(ipAddress>>24 & 0xff));
+	}
 }
