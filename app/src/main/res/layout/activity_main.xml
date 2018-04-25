@@ -11,18 +11,26 @@
         android:layout_height="wrap_content" />
 
     <Button
-        android:text="弹框"
-        android:layout_marginTop="30dp"
-        android:layout_gravity="center"
-        android:id="@+id/btn_show"
+        android:id="@+id/btn_ring"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="响铃" />
 
     <Button
-        android:text="响铃"
-        android:layout_marginTop="30dp"
+        android:id="@+id/btn_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:id="@+id/btn_ring"
+        android:layout_marginTop="30dp"
+        android:text="弹框" />
+
+    <Spinner
+        android:entries="@array/color"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:id="@+id/spinner_color"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 

@@ -1,0 +1,4 @@
+#Wed Apr 25 21:26:07 CST 2018
+base.0=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

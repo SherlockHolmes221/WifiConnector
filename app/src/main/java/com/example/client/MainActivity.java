@@ -31,19 +31,31 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
+	private static final String WAKE = "0";
+	private static final String RING = "1";
+	private static final String DIALOG_WHITE = "2";
+	private static final String DIALOG_RED = "3";
+	private static final String DIALOG_BLUE = "4";
+	private static final String DIALOG_YELLOW = "5";
+
 	Socket socket = null;
 	String buffer = "";
+
+	int position = 0;
 
 	Button wake;
 	Button ring;
 	Button show;
+	Spinner spinner;
 
 	ArrayList<String> list = new ArrayList<>();
 
@@ -54,14 +66,14 @@ public class MainActivity extends Activity {
 
 		wake = (Button) findViewById(R.id.btn_wake);//0
 		ring = (Button) findViewById(R.id.btn_ring);//1
-		show = (Button) findViewById(R.id.btn_show);//2
-
+		show = (Button) findViewById(R.id.btn_show);
+		spinner = findViewById(R.id.spinner_color);
 
 		wake.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				//启动线程 向服务器发送和接收信息
-				new MyThread("0").start();
+				new MyThread(WAKE).start();
 			}
 		});
 
@@ -69,7 +81,20 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				//启动线程 向服务器发送和接收信息
-				new MyThread("1").start();
+				new MyThread(RING).start();
+			}
+		});
+
+		spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+			@Override
+			public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+				position = i;
+				Log.e("position", String.valueOf(position));
+			}
+
+			@Override
+			public void onNothingSelected(AdapterView<?> adapterView) {
+
 			}
 		});
 
@@ -77,7 +102,15 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				//启动线程 向服务器发送和接收信息
-				new MyThread("2").start();
+				if(position == 0){
+					new MyThread(DIALOG_WHITE).start();
+				}else if(position == 1){
+					new MyThread(DIALOG_RED).start();
+				}else if(position == 2){
+					new MyThread(DIALOG_BLUE).start();
+				}else if(position == 3){
+					new MyThread(DIALOG_YELLOW).start();
+				}
 			}
 		});
 	}
@@ -117,7 +150,7 @@ public class MainActivity extends Activity {
 						runOnUiThread(new Runnable() {
 							@Override
 							public void run() {
-								showToast("成功向"+ip+"传输："+buffer.toString());
+								showToast("成功向"+ip+"传输");
 							}
 						});
 						//关闭各种输入输出流

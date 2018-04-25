@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Wed Apr 25 21:26:08 CST 2018
+0.baseType=DIRECTORY
+0.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dex\\release\\0
+0.path=classes.dex
+0.set=DEX
+count=1

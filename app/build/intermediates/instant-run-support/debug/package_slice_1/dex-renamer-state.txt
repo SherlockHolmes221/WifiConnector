@@ -1,4 +1,4 @@
-#Tue Apr 24 02:05:51 CST 2018
-base.0=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\1
+#Wed Apr 25 20:12:14 CST 2018
+base.0=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\2
 path.0=classes.dex
 renamed.0=classes.dex

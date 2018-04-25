@@ -1,6 +1,6 @@
 #Internal package file, do not edit.
-#Tue Apr 24 02:05:58 CST 2018
-2.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\11
+#Wed Apr 25 20:12:20 CST 2018
+2.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
 5.set=DEX
 0.path=classes.dex
 2.baseType=DIRECTORY
@@ -19,9 +19,9 @@ count=6
 4.path=classes.dex
 1.baseType=DIRECTORY
 5.path=classes.dex
-0.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
+0.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\17
 0.baseType=DIRECTORY
 3.set=DEX
-1.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\16
+1.base=C\:\\Users\\quxia\\Desktop\\bbt\\socket\\Client\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\14
 4.baseType=DIRECTORY
 0.set=DEX
