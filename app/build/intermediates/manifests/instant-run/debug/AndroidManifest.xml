@@ -5,9 +5,11 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="16" />
+        android:minSdkVersion="18"
+        android:targetSdkVersion="26" />
 
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -18,13 +20,20 @@
     <!-- <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/> -->
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
+    <meta-data
+        android:name="android.support.VERSION"
+        android:value="26.0.0-alpha1" />
+
     <application
+        android:name="com.example.androidsockettest.MyApplication"
         android:allowBackup="true"
         android:debuggable="true"
+        android:excludeFromRecents="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:launchMode="singleInstance"
         android:testOnly="true"
-        android:theme="@style/AppTheme" >
+        android:theme="@android:style/Theme.Light.NoTitleBar" >
         <activity
             android:name="com.example.androidsockettest.MainActivity"
             android:label="@string/app_name" >
@@ -34,6 +43,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.example.androidsockettest.MessageDialog"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Light.NoTitleBar" />
 
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"

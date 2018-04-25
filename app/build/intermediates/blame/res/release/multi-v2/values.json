@@ -1,0 +1,62 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values\\values.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\src\\main\\res\\values\\color.xml",
+                    "from": {
+                        "startLines": "4,5,3,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "110,161,59,210",
+                        "endColumns": "38,37,39,40",
+                        "endOffsets": "144,194,94,246"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,94,132,172",
+                        "endColumns": "38,37,39,40",
+                        "endOffsets": "89,127,167,208"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\src\\main\\res\\values\\styles.xml",
+                    "from": {
+                        "startLines": "6,15",
+                        "startColumns": "4,4",
+                        "startOffsets": "192,525",
+                        "endLines": "12,17",
+                        "endColumns": "12,12",
+                        "endOffsets": "484,682"
+                    },
+                    "to": {
+                        "startLines": "9,16",
+                        "startColumns": "4,4",
+                        "startOffsets": "361,652",
+                        "endLines": "15,18",
+                        "endColumns": "12,12",
+                        "endOffsets": "647,807"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\src\\main\\res\\values\\strings.xml",
+                    "from": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "59,104,158",
+                        "endColumns": "43,52,50",
+                        "endOffsets": "98,152,204"
+                    },
+                    "to": {
+                        "startLines": "6,7,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "213,257,310",
+                        "endColumns": "43,52,50",
+                        "endOffsets": "252,305,356"
+                    }
+                }
+            ]
+        }
+    ]
+}

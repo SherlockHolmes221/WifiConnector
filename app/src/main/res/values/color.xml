@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="blue">#0000FF</color> <!--蓝色 -->
+    <color name="red">#FF0000</color><!--红色 -->
+    <color name="yellow">#FFFF00</color><!--黄色 -->
+</resources>

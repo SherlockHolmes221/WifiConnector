@@ -7,6 +7,13 @@
     -->
     <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- API 14 theme customizations can go here. -->
+
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="android:Theme.Light.NoTitleBar.Fullscreen">
+        <item name="android:windowActionBar" >true</item>
+        <item name="android:windowNoTitle">true</item>
     </style>
 
 </resources>

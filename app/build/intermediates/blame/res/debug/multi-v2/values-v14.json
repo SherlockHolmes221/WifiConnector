@@ -4,22 +4,39 @@
             "outputFile": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v14\\values-v14.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "source": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\src\\main\\res\\values-v14\\color.xml",
                     "from": {
-                        "startLines": "7",
-                        "startColumns": "4",
-                        "startOffsets": "225",
-                        "endLines": "9",
-                        "endColumns": "12",
-                        "endOffsets": "373"
+                        "startLines": "4,5,3,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "110,161,59,210",
+                        "endColumns": "38,37,39,40",
+                        "endOffsets": "144,194,94,246"
                     },
                     "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endLines": "4",
-                        "endColumns": "12",
-                        "endOffsets": "201"
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,94,132,172",
+                        "endColumns": "38,37,39,40",
+                        "endOffsets": "89,127,167,208"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\quxia\\Desktop\\bbt\\socket\\androidSocketTest\\app\\src\\main\\res\\values-v14\\styles.xml",
+                    "from": {
+                        "startLines": "7,13",
+                        "startColumns": "4,4",
+                        "startOffsets": "227,423",
+                        "endLines": "10,16",
+                        "endColumns": "12,12",
+                        "endOffsets": "377,626"
+                    },
+                    "to": {
+                        "startLines": "6,10",
+                        "startColumns": "4,4",
+                        "startOffsets": "213,365",
+                        "endLines": "9,13",
+                        "endColumns": "12,12",
+                        "endOffsets": "360,564"
                     }
                 }
             ]
